@@ -16,7 +16,7 @@ A step by step series of examples that tell you have to get a development env ru
 
 Git Clone Project
 ```
-git clone http://git.dataw.com.cn/lonly/zeppelin-webapp.git
+git clone http://git.dataw.com.cn/dmp/zeppelin-webapp.git
 ```
 
 Cp Project
@@ -83,13 +83,13 @@ You can fork the project for further development
 
 ## Versioning
 
-For the versions available, see the [tags on this repository](http://git.dataw.com.cn/lonly/zeppelin-webapp/). 
+For the versions available, see the [tags on this repository](http://git.dataw.com.cn/dmp/zeppelin-webapp/). 
 
 ## Authors
 
 * **Lonly** - *Initial work* - [Lonly](https://github.com/lonly197)
 
-See also the list of [contributors](http://git.dataw.com.cn/lonly/zeppelin-webapp/contributors) who participated in this project.
+See also the list of [contributors](http://git.dataw.com.cn/dmp/zeppelin-webapp/contributors) who participated in this project.
 
 ## License
 
