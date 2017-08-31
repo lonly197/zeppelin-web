@@ -55,7 +55,6 @@ After=network.target remote-fs.target nss-lookup.target
    
 [Service]  
 Type=forking  
-PIDFile=/var/run/zeppelin.pid  
 ExecStart=/opt/zeppelin/bin/zeppelin-daemon.sh start
 ExecReload=/opt/zeppelin/bin/zeppelin-daemon.sh restart
 ExecStop=/opt/zeppelin/bin/zeppelin-daemon.sh stop
