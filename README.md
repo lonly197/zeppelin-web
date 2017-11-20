@@ -22,7 +22,7 @@ git clone http://git.dataw.com.cn/dmp/zeppelin-webapp.git
 Cp Project
 
 ```
-cp -r ./zeppelin-webapp/* ${ZEPPELIN_HOME}/webapps/webapp/
+rsync -avhP ./zeppelin-webapp/* ${ZEPPELIN_HOME}/webapps/webapp/
 ```
 
 Edit Shiro.ini
