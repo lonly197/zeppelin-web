@@ -20,7 +20,7 @@ limitations under the License.
     <span ng-if="notebookJob.isRunningJob"> {{getProgress()}}% </span>
     <!-- Run / Cancel button -->
     <span ng-if="!notebookJob.isRunningJob" class="icon-control-play" style="cursor:pointer;color:#3071A9" tooltip-placement="left"
-        uib-tooltip="START ALL Job" ng-click="runNotebookJob(notebookJob.noteId)"> </span>
+        uib-tooltip="启动所有任务" ng-click="runNotebookJob(notebookJob.noteId)"> </span>
     <span ng-if="notebookJob.isRunningJob" class="icon-control-pause" style="cursor:pointer;color:#3071A9" tooltip-placement="left"
         uib-tooltip="停止所有任务" ng-click="stopNotebookJob(notebookJob.noteId)"> </span>
 </div>

@@ -60,31 +60,31 @@ limitations under the License.
                                 </button>
                                 <ul class="dropdown-menu" role="menu">
                                     <li ng-if="getInterpreterRunningOption(setting.id) === 'Globally'">
-                                        <a style="cursor:pointer" uib-tooltip="Single interpreter instance are shared across notes"
-                                            ng-click="setPerNoteOption(setting.id, 'shared')"> shared per note </a>
+                                        <a style="cursor:pointer" uib-tooltip="单个插件实例在所有工作区间共享"
+                                            ng-click="setPerNoteOption(setting.id, 'shared')"> 按工作区共享 </a>
                                     </li>
                                     <li>
                                         <a style="cursor:pointer" ng-if="getInterpreterRunningOption(setting.id) === 'Per Note'"
-                                            uib-tooltip="Separate Interpreter instance for each note" ng-click="setPerNoteOption(setting.id, 'scoped')">
-                                        scoped per note </a>
+                                            uib-tooltip="按工作区隔离插件实例" ng-click="setPerNoteOption(setting.id, 'scoped')">
+                                        工作区可见 </a>
                                     </li>
                                     <li>
                                         <a style="cursor:pointer" ng-if="getInterpreterRunningOption(setting.id) === 'Per User'"
-                                            uib-tooltip="Separate Interpreter instance for each note" ng-click="setPerUserOption(setting.id, 'scoped')">
-                                        scoped per user </a>
+                                            uib-tooltip="按工作区隔离插件实例" ng-click="setPerUserOption(setting.id, 'scoped')">
+                                        用户可见 </a>
                                     </li>
                                     <li>
                                         <a style="cursor:pointer" ng-if="getInterpreterRunningOption(setting.id) === 'Per Note'"
-                                            uib-tooltip="Separate Interpreter process for each note" ng-click="setPerNoteOption(setting.id, 'isolated')">
-                                        isolated per note </a>
+                                            uib-tooltip="按工作区隔离插件进程" ng-click="setPerNoteOption(setting.id, 'isolated')">
+                                        按工作区隔离 </a>
                                     </li>
                                     <li>
                                         <a style="cursor:pointer" ng-if="getInterpreterRunningOption(setting.id) === 'Per User'"
-                                            uib-tooltip="Separate Interpreter process for each note" ng-click="setPerUserOption(setting.id, 'isolated')">
-                                        isolated per user </a>
+                                            uib-tooltip="按工作区隔离插件进程" ng-click="setPerUserOption(setting.id, 'isolated')">
+                                       按用户隔离 </a>
                                     </li>
                                 </ul>
-                            </span> process.
+                            </span> 进程。
                             <span ng-if="getInterpreterRunningOption(setting.id) === 'Per User' && ticket.principal !== 'anonymous'">
                                 <span ng-if="getPerNoteOption(setting.id) === 'shared'">
                                     <button type="button" class="btn btn-default btn-xs" ng-click="setPerNoteOption(setting.id, 'scoped')"
@@ -101,12 +101,12 @@ limitations under the License.
                       && getPerNoteOption(setting.id) !== 'shared'">
                         <div class="col-md-12">
                             <span>
-                                <span class="hidden-xs" style="padding-left: 190px">And </span>
-                                <span class="visible-xs" style="padding-left: 0px">And </span>
+                                <span class="hidden-xs" style="padding-left: 190px">和 </span>
+                                <span class="visible-xs" style="padding-left: 0px">和 </span>
                                 <span class="btn-group">
                                     <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown"
                                         ng-disabled="true">
-                                        <span> Per Note </span>
+                                        <span> 按工作区 </span>
                                         <span class="caret"></span>
                                     </button>
                                 </span> in
@@ -117,15 +117,15 @@ limitations under the License.
                                     </button>
                                     <ul class="dropdown-menu" role="menu">
                                         <li>
-                                            <a style="cursor:pointer" uib-tooltip="Separate Interpreter instance for each note"
-                                                ng-click="setPerNoteOption(setting.id, 'scoped')"> scoped per note </a>
+                                            <a style="cursor:pointer" uib-tooltip="按工作区隔离插件实例"
+                                                ng-click="setPerNoteOption(setting.id, 'scoped')"> 工作区可见 </a>
                                         </li>
                                         <li>
-                                            <a style="cursor:pointer" uib-tooltip="Separate Interpreter process for each note"
-                                                ng-click="setPerNoteOption(setting.id, 'isolated')"> isolated per note </a>
+                                            <a style="cursor:pointer" uib-tooltip="按工作区隔离插件进程"
+                                                ng-click="setPerNoteOption(setting.id, 'isolated')"> 按工作区隔离 </a>
                                         </li>
                                     </ul>
-                                </span> process.
+                                </span> 进程。
                                 <button type="button" class="btn btn-default btn-xs" ng-click="setPerNoteOption(setting.id, 'shared')"
                                     data-toggle="dropdown">
                                     <i class="fa fa-minus"></i>
@@ -139,7 +139,7 @@ limitations under the License.
                         <div class="checkbox remove-margin-top-bottom">
                             <span class="input-group" style="line-height:30px">
                                 <label>
-                                    <input type="checkbox" style="width:20px" ng-model="newInterpreterSetting.option.isUserImpersonate"> User Impersonate </label>
+                                    <input type="checkbox" style="width:20px" ng-model="newInterpreterSetting.option.isUserImpersonate"> 用户模拟 </label>
                             </span>
                         </div>
                     </div>
@@ -170,7 +170,7 @@ limitations under the License.
                             <span class="input-group" style="line-height:30px">
                                 <label>
                                     <input type="checkbox" style="width:20px !important" id="idShowPermission" ng-click="togglePermissions('newInterpreter')"
-                                        ng-model="newInterpreterSetting.option.setPermission"> Set permission </label>
+                                        ng-model="newInterpreterSetting.option.setPermission"> 设置权限 </label>
                             </span>
                         </div>
                     </div>
@@ -181,10 +181,10 @@ limitations under the License.
                         <!-- permissions -->
                         <div ng-show="newInterpreterSetting.option.setPermission" class="permissionsForm">
                             <div>
-                                <p> Enter comma separated users in the fields.
-                                    <br> Empty field (*) implies anyone can run this interpreter. </p>
+                                <p> 输入逗号分割用户名。
+                                    <br> 输入*号表示任何用户都可以运行该插件。</p>
                                 <div>
-                                    <span class="owners">Owners </span>
+                                    <span class="owners">所有者 </span>
                                     <select id="newInterpreterUsers" class="form-control" multiple>
                                         <option ng-repeat="user in newInterpreterSetting.option.users" selected>{{user}} </select>
                                 </div>
@@ -193,13 +193,13 @@ limitations under the License.
                     </div>
                 </div>
                 <div>
-                    <h5>Properties</h5>
+                    <h5>属性</h5>
                     <table class="table table-striped properties">
                         <tr>
-                            <th>name
-                                <th>value
-                                    <th>description
-                                        <th>action
+                            <th>键
+                                <th>值
+                                    <th>描述
+                                        <th>动作
                                             <tr ng-repeat="key in newInterpreterSetting.properties | sortByKey">
                                                 <td>{{key}}
                                                     <td>
@@ -222,12 +222,12 @@ limitations under the License.
                     </table>
                 </div>
                 <div>
-                    <h5>Dependencies</h5>
+                    <h5>依赖包</h5>
                     <table class="table table-striped properties">
                         <tr>
-                            <th>artifact
-                                <th>exclude
-                                    <th>action
+                            <th>包名称
+                                <th>排斥
+                                    <th>动作
                                         <tr ng-repeat="dep in newInterpreterSetting.dependencies">
                                             <td>
                                                 <input ng-model="dep.groupArtifactVersion" style="width:100%">
@@ -250,8 +250,8 @@ limitations under the License.
                                                                         </button>
                     </table>
                 </div>
-                <span class="btn btn-primary" ng-click="addNewInterpreterSetting()"> Save </span>
-                <span class="btn btn-default" ng-click="cancelInterpreterSetting()"> Cancel </span>
+                <span class="btn btn-primary" ng-click="addNewInterpreterSetting()"> 保存 </span>
+                <span class="btn btn-default" ng-click="cancelInterpreterSetting()"> 取消 </span>
             </div>
         </div>
     </div>

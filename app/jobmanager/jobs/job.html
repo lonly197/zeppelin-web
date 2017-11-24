@@ -40,15 +40,15 @@ limitations under the License.
                 </i>
             </a>
             <a ng-switch-when="ABORT" style="text-decoration: none !important" ng-href="#/notebook/{{notebookJob.noteId}}?paragraph={{paragraphJob.id}}">
-                <i style="color: orange" class="fa fa-circle" tooltip-placement="top-left" uib-tooltip="{{paragraphJob.name}} is ABORT">
+                <i style="color: orange" class="fa fa-circle" tooltip-placement="top-left" uib-tooltip="{{paragraphJob.name}} 任务已中止">
                 </i>
             </a>
             <a ng-switch-when="ERROR" style="text-decoration: none !important" ng-href="#/notebook/{{notebookJob.noteId}}?paragraph={{paragraphJob.id}}">
-                <i style="color: red" class="fa fa-circle" tooltip-placement="top-left" uib-tooltip="{{paragraphJob.name}} is ERROR">
+                <i style="color: red" class="fa fa-circle" tooltip-placement="top-left" uib-tooltip="{{paragraphJob.name}} 任务已出错">
                 </i>
             </a>
             <a ng-switch-when="PENDING" style="text-decoration: none !important" ng-href="#/notebook/{{notebookJob.noteId}}?paragraph={{paragraphJob.id}}">
-                <i style="color: gray" class="fa fa-circle" tooltip-placement="top-left" uib-tooltip="{{paragraphJob.name}} is PENDING">
+                <i style="color: gray" class="fa fa-circle" tooltip-placement="top-left" uib-tooltip="{{paragraphJob.name}} 任务被挂起">
                 </i>
             </a>
             <a ng-switch-when="RUNNING" style="text-decoration: none !important" ng-href="#/notebook/{{notebookJob.noteId}}?paragraph={{paragraphJob.id}}">
@@ -56,7 +56,7 @@ limitations under the License.
                 </i>
             </a>
             <a ng-switch-default class="icon-question" style="text-decoration: none !important" ng-href="#/notebook/{{notebookJob.noteId}}?paragraph={{paragraphJob.id}}">
-                <i class="icon-question" tooltip-placement="top-left" uib-tooltip="{{paragraphJob.name}} is {{paragraphJob.status}}">
+                <i class="icon-question" tooltip-placement="top-left" uib-tooltip="{{paragraphJob.name}} 状态是： {{paragraphJob.status}}">
                 </i>
             </a>
         </span>

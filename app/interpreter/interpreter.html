@@ -86,14 +86,14 @@ limitations under the License.
                     </small>
                     <small ng-switch="setting.status">
                         <small ng-switch-when="READY">
-                            <i style="color: green; margin-right: 3px" class="fa fa-circle" uib-tooltip="Ready"> </i>
+                            <i style="color: green; margin-right: 3px" class="fa fa-circle" uib-tooltip="就绪"> </i>
                         </small>
                         <small ng-switch-when="ERROR">
                             <i style="color: red; cursor: pointer" class="fa fa-circle" ng-click="showErrorMessage(setting)"
-                                uib-tooltip="Error downloading dependencies"> </i>
+                                uib-tooltip="下载依赖包过程中发生错误"> </i>
                         </small>
                         <small ng-switch-default>
-                            <i style="color: blue" class="fa fa-spinner spinAnimation" uib-tooltip="Dependencies are downloading">
+                            <i style="color: blue" class="fa fa-spinner spinAnimation" uib-tooltip="依赖包下载中">
                             </i>
                         </small>
                     </small>

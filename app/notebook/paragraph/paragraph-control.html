@@ -16,12 +16,12 @@ limitations under the License.
     <span ng-if="paragraph.status=='RUNNING'"> {{getProgress()}}% </span>
     <!-- Run / Cancel button -->
     <span ng-if="!revisionView">
-        <span class="icon-control-play" style="cursor:pointer;color:#3071A9" tooltip-placement="top" uib-tooltip="Run this paragraph (Shift+Enter)"
+        <span class="icon-control-play" style="cursor:pointer;color:#3071A9" tooltip-placement="top" uib-tooltip="运行工作表 (Shift+Enter)"
             ng-click="runParagraph(getEditorValue())" ng-show="paragraph.status!='RUNNING' && paragraph.status!='PENDING' && paragraph.config.enabled"></span>
         <span class="icon-control-pause" style="cursor:pointer;color:#CD5C5C" tooltip-placement="top" uib-tooltip="取消 (Ctrl+{{ (isMac ? 'Option' : 'Alt') }}+C)"
             ng-click="cancelParagraph(paragraph)" ng-show="paragraph.status=='RUNNING' || paragraph.status=='PENDING'"></span>
         <span class="{{paragraph.config.editorHide ? 'icon-size-fullscreen' : 'icon-size-actual'}}" style="cursor:pointer" tooltip-placement="top"
-            uib-tooltip="{{(paragraph.config.editorHide ? 'Show' : 'Hide')}} editor (Ctrl+{{ (isMac ? 'Option' : 'Alt') }}+E)"
+            uib-tooltip="{{(paragraph.config.editorHide ? '显示' : '隐藏')}} editor (Ctrl+{{ (isMac ? 'Option' : 'Alt') }}+E)"
             ng-click="toggleEditor(paragraph)"></span>
         <span class="{{paragraph.config.tableHide ? 'icon-notebook' : 'icon-book-open'}}" style="cursor:pointer" tooltip-placement="top"
             uib-tooltip="{{(paragraph.config.tableHide ? '显示' : '隐藏')}} output (Ctrl+{{ (isMac ? 'Option' : 'Alt') }}+O)" ng-click="toggleOutput(paragraph)"></span>
@@ -39,7 +39,7 @@ limitations under the License.
                     <span ng-if="paragraph.config.runOnSelectionChange == true" class="fa fa-toggle-on shortcut-icon" style="padding:3px 8px 8px 20px"></span>
                     <span ng-if="paragraph.config.runOnSelectionChange == false" class="fa fa-toggle-off shortcut-icon" style="padding:3px 8px 8px 20px"></span>运行 选择修改
                     <form style="display:inline; float:right">
-                        <input type="checkbox" style="width:16px; margin-right:20px" tooltip-placement="top" uib-tooltip="Even if you uncheck this, still can run the paragraph by pressing Enter"
+                        <input type="checkbox" style="width:16px; margin-right:20px" tooltip-placement="top" uib-tooltip="即使您取消选中，仍然可以按Enter键运行工作表"
                             ng-checked="{{paragraph.config.runOnSelectionChange}}" ng-click="turnOnAutoRun(paragraph)"> </form>
                 </li>
                 <li>
