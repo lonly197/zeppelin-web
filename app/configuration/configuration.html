@@ -15,12 +15,12 @@ limitations under the License.
     <div class="header">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="new_h3"> Configurations </h3>
+                <h3 class="new_h3"> 配置管理 </h3>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12"> Shows current configurations for Zeppelin Server.<br> Note: For security reasons, some key/value pairs including
-                passwords would not be shown. </div>
+            <div class="col-md-12"> 以“键-值”对方式展示服务器端当前支持的交互式分析工具（Spark/Python/R等）以及Apache Zeppelin的其他配置。
+                <br> 注意：安全原因用户名和密码通常不展示，需要获取请联系对应管理员。 </div>
         </div>
     </div>
 </div>
@@ -31,8 +31,8 @@ limitations under the License.
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th style="width:30%">name
-                                <th>value
+                            <th style="width:30%">键
+                                <th>值
                                     <tr ng-repeat="key in configurations | sortByKey">
                                         <td>{{key}}
                                             <td>

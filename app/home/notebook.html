@@ -14,10 +14,10 @@ limitations under the License.
 <div ng-controller="HomeCtrl as home">
     <div class="row">
         <div class="col-md-4">
-            <h4>Notebook <i ng-class="isReloadingNotes ? 'fa fa-refresh fa-spin' : 'fa fa-refresh'" ng-style="!isReloadingNotes && {'cursor': 'pointer'}"
-                    style="font-size: 13px" ng-click="reloadNoteList();" tooltip-placement="bottom" uib-tooltip="Reload notes from storage"> </i>                </h4>
-            <h5><a href="" data-toggle="modal" data-target="#noteImportModal" style="text-decoration: none"> <i style="font-size: 15px" class="fa fa-upload"></i> Import note</a></h5>
-            <h5><a href="" data-toggle="modal" data-target="#noteNameModal" style="text-decoration: none"> <i style="font-size: 15px" class="icon-notebook"></i> Create new note</a></h5>
+            <h4>工作区 <i ng-class="isReloadingNotes ? 'fa fa-refresh fa-spin' : 'fa fa-refresh'" ng-style="!isReloadingNotes && {'cursor': 'pointer'}"
+                    style="font-size: 13px" ng-click="reloadNoteList();" tooltip-placement="bottom" uib-tooltip="重新加载工作区"> </i>                </h4>
+            <h5><a href="" data-toggle="modal" data-target="#noteImportModal" style="text-decoration: none"> <i style="font-size: 15px" class="fa fa-upload"></i> 导入工作区</a></h5>
+            <h5><a href="" data-toggle="modal" data-target="#noteNameModal" style="text-decoration: none"> <i style="font-size: 15px" class="icon-notebook"></i> 创建新工作区</a></h5>
             <ul id="notebook-names">
                 <li class="filter-names" ng-include="'components/filterNoteNames/filter-note-names.html'"></li>
                 <div ng-if="!query.q || query.q === ''">

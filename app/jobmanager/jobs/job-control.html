@@ -10,4 +10,17 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
---> <div id="{{notebookJob.noteId}}_control" class="control"> <span> {{lastExecuteTime(notebookJob.unixTimeLastRun)}} </span> <span> <span ng-if="notebookJob.isRunningJob"> RUNNING </span> <span ng-if="!notebookJob.isRunningJob"> READY </span> </span> <span ng-if="notebookJob.isRunningJob"> {{getProgress()}}% </span> <!-- Run / Cancel button --> <span ng-if="!notebookJob.isRunningJob" class="icon-control-play" style="cursor:pointer;color:#3071A9" tooltip-placement="left" uib-tooltip="START ALL Job" ng-click="runNotebookJob(notebookJob.noteId)"> </span> <span ng-if="notebookJob.isRunningJob" class="icon-control-pause" style="cursor:pointer;color:#3071A9" tooltip-placement="left" uib-tooltip="STOP ALL Job" ng-click="stopNotebookJob(notebookJob.noteId)"> </span> </div>
+-->
+<div id="{{notebookJob.noteId}}_control" class="control">
+    <span> {{lastExecuteTime(notebookJob.unixTimeLastRun)}} </span>
+    <span>
+        <span ng-if="notebookJob.isRunningJob"> 运行中 </span>
+        <span ng-if="!notebookJob.isRunningJob"> 就绪 </span>
+    </span>
+    <span ng-if="notebookJob.isRunningJob"> {{getProgress()}}% </span>
+    <!-- Run / Cancel button -->
+    <span ng-if="!notebookJob.isRunningJob" class="icon-control-play" style="cursor:pointer;color:#3071A9" tooltip-placement="left"
+        uib-tooltip="START ALL Job" ng-click="runNotebookJob(notebookJob.noteId)"> </span>
+    <span ng-if="notebookJob.isRunningJob" class="icon-control-pause" style="cursor:pointer;color:#3071A9" tooltip-placement="left"
+        uib-tooltip="停止所有任务" ng-click="stopNotebookJob(notebookJob.noteId)"> </span>
+</div>
