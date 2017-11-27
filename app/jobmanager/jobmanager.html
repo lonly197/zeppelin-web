@@ -48,7 +48,7 @@ limitations under the License.
                     </ul>
                     <div class="input-group">
                         <input class="job-note-name-query job-note-name-font-family form-control btn-xs" style="margin-left: 5px"
-                            placeholder="Search for Job" type="text" ng-model="filterConfig.filterValueNotebookName" ng-keyup="doFilterInputTyping($event, jobInfomations, filterConfig, isLoadingFilter)">
+                            placeholder="任务搜素" type="text" ng-model="filterConfig.filterValueNotebookName" ng-keyup="doFilterInputTyping($event, jobInfomations, filterConfig, isLoadingFilter)">
                         <span class="input-group-addon text-right" ng-class="{true : 'btn-primary active', false: ''}[isActiveSearchTimer]"
                             style="height: 5px; padding: 0px 6px 0px 9px !important" ng-click="doForceFilterInputTyping($event, jobInfomations, filterConfig, isLoadingFilter)">
                             <i class="fa fa-search fa-sm"></i>
@@ -60,17 +60,17 @@ limitations under the License.
         <div class="col-md-6 text-right" style="padding-top: 6px">
             <span ng-repeat="jobStatus in ['READY', 'FINISHED', 'ABORT', 'ERROR','PENDING','RUNNING']" ng-switch="jobStatus">
                 <span ng-switch-when="FINISHED">
-                    <i style="color: green; margin-right: 3px" class="fa fa-circle" ng-click=""> </i> {{jobStatus}} </span>
+                    <i style="color: green; margin-right: 3px" class="fa fa-circle" ng-click=""> </i> 完成 </span>
                 <span ng-switch-when="RUNNING" style="margin-right: 3px">
-                    <i style="color: blue" class="fa fa-spinner" ng-click=""> </i> {{jobStatus}} </span>
+                    <i style="color: blue" class="fa fa-spinner" ng-click=""> </i> 运行中 </span>
                 <span ng-switch-when="READY" style="margin-right: 3px">
-                    <i style="color: green" class="fa fa-circle-o" ng-click=""> </i> {{jobStatus}} </span>
+                    <i style="color: green" class="fa fa-circle-o" ng-click=""> </i> 准备 </span>
                 <span ng-switch-when="PENDING" style="margin-right: 3px">
-                    <i style="color: gray" class="fa fa-circle" ng-click=""> </i> {{jobStatus}} </span>
+                    <i style="color: gray" class="fa fa-circle" ng-click=""> </i> 等待 </span>
                 <span ng-switch-when="ABORT" style="margin-right: 3px">
-                    <i style="color: orange" class="fa fa-circle" ng-click=""> </i> {{jobStatus}} </span>
+                    <i style="color: orange" class="fa fa-circle" ng-click=""> </i> 终止 </span>
                 <span ng-switch-when="ERROR" style="margin-right: 3px">
-                    <i style="color: red" class="fa fa-circle" ng-click=""> </i> {{jobStatus}} </span>
+                    <i style="color: red" class="fa fa-circle" ng-click=""> </i> 错误 </span>
             </span>
         </div>
     </div>
@@ -79,7 +79,7 @@ limitations under the License.
     <div class="note-jump"></div>
     <div ng-if="isLoadingFilter === true" class="paragraph-col">
         <div class="job-space box job-margin text-center">
-            <i style="color: blue" class="fa fa-spinner spinAnimation"> </i>&nbsp;Loading... </div>
+            <i style="color: blue" class="fa fa-spinner spinAnimation"> </i>&nbsp;拼命加载... </div>
     </div>
     <div ng-if="JobInfomationsByFilter.length > 0" ng-repeat="notebookJob in JobInfomationsByFilter track by $index" class="paragraph-col">
         <div ng-include src="'app/jobmanager/jobs/job.html?v=1496974691584'" class="job-space box job-margin" ng-controller="JobCtrl">

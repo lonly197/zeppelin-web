@@ -14,7 +14,7 @@ limitations under the License.
 <div class="noteAction" ng-show="note.id && !paragraphUrl">
     <h3>
         <div style="float: left; width: auto; max-width: 40%" ng-controller="ElasticInputCtrl as input">
-            <input type="text" pu-elastic-input class="form-control2" placeholder="New name" style="min-width: 0px; max-width: 95%"
+            <input type="text" pu-elastic-input class="form-control2" placeholder="新的工作区名字" style="min-width: 0px; max-width: 95%"
                 ng-if="input.showEditor" ng-model="input.value" ng-escape="input.showEditor = false" focus-if="input.showEditor"
                 ng-blur="updateNoteName(input.value);input.showEditor = false;" ng-enter="updateNoteName(input.value);input.showEditor = false;">
             <p class="form-control-static2" ng-click="input.showEditor = !revisionView; input.value = note.name" ng-show="!input.showEditor">{{noteName(note)}}</p>
@@ -71,7 +71,7 @@ limitations under the License.
                         <li>
                             <div class="commit-container">
                                 <div>
-                                    <input type="text" dropdown-input placeholder="commit message" id="note.checkpoint.message"
+                                    <input type="text" dropdown-input placeholder="提交备注信息" id="note.checkpoint.message"
                                         style="width: 145px" ng-model="note.checkpoint.message">
                                     <button type="button" class="btn btn-default btn-xs" ng-hide="viewOnly" ng-click="checkpointNote(note.checkpoint.message)"
                                         style="margin-left: 4px" tooltip-append-to-body="true" tooltip-class="revisionTooltip"

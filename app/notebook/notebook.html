@@ -25,17 +25,36 @@ limitations under the License.
         <hr>
         <div>
             <h5>插件绑定</h5>
-            <p> 为工作区绑定插件，点击给工作区绑定/解除绑定指定插件，拖拉可以重排插件列表顺序。 <br>                列表的第一个插件是默认插件。需要新建/删除插件，请前往 <a href="#/interpreter">插件管理</a>                菜单。 </p>
+            <p> 为工作区绑定插件，点击给工作区绑定/解除绑定指定插件，拖拉可以重排插件列表顺序。
+                <br> 列表的第一个插件是默认插件。需要新建/删除插件，请前往
+                <a href="#/interpreter">插件管理</a> 菜单。 </p>
             <div class="interpreterSettings" as-sortable="interpreterSelectionListeners" data-ng-model="interpreterBindings">
                 <div data-ng-repeat="item in interpreterBindings" as-sortable-item>
-                    <div> <a ng-click="restartInterpreter(item)" ng-class="{'inactivelink': !item.selected}" uib-tooltip="重启"> <span class="glyphicon glyphicon-refresh btn-md"></span> </a>&nbsp
+                    <div>
+                        <a ng-click="restartInterpreter(item)" ng-class="{'inactivelink': !item.selected}" uib-tooltip="重启">
+                            <span class="glyphicon glyphicon-refresh btn-md"></span>
+                        </a>&nbsp
                         <div as-sortable-item-handle ng-click="item.selected = !item.selected" class="btn" ng-class="{'btn-info': item.selected, 'btn-default': !item.selected}">
-                            <font style="font-size:16px">{{item.name}}</font> <small> <span style="display:inline-block" ng-repeat="intp in item.interpreters"> <span ng-show="!$first">, </span> %<span ng-show="!$parent.$first || $first">{{item.name}}</span><span ng-show="(!$parent.$first || $first) && !$first">.</span><span ng-show="!$first">{{intp.name}}</span> <span ng-show="$parent.$first && $first">(default)</span> </span> </small>                            </div>
+                            <font style="font-size:16px">{{item.name}}</font>
+                            <small>
+                                <span style="display:inline-block" ng-repeat="intp in item.interpreters">
+                                    <span ng-show="!$first">, </span> %
+                                    <span ng-show="!$parent.$first || $first">{{item.name}}</span>
+                                    <span ng-show="(!$parent.$first || $first) && !$first">.</span>
+                                    <span ng-show="!$first">{{intp.name}}</span>
+                                    <span ng-show="$parent.$first && $first">(default)</span>
+                                </span>
+                            </small>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div> <br>
-        <div> <button class="btn btn-primary" ng-click="saveSetting()">保存</button> <button class="btn btn-default" ng-click="closeSetting()">取消</button>            </div>
+        </div>
+        <br>
+        <div>
+            <button class="btn btn-primary" ng-click="saveSetting()">保存</button>
+            <button class="btn btn-default" ng-click="closeSetting()">取消</button>
+        </div>
     </div>
     <!-- permissions -->
     <div ng-if="showPermissions && ticket.principal && !isAnonymous" class="permissions">
@@ -44,15 +63,29 @@ limitations under the License.
         </div>
         <hr>
         <div>
-            <p> 输入逗号用于分割账号或组。 <br> 输入*号表示任何用户都可以操作。
+            <p> 输入逗号用于分割账号或组。
+                <br> 输入*号表示任何用户都可以操作。
             </p>
             <div class="permissionsForm" data-ng-model="permissions">
-                <p><span class="owners">所有者 </span> <select id="selectOwners" multiple> <option ng-repeat="owner in permissions.owners" selected>{{owner}} </select>                    所有者可以改变权限，包括对工作区做读和写操作。</p>
-                <p><span class="writers">读写权限 </span> <select id="selectWriters" multiple> <option ng-repeat="writers in permissions.writers" selected>{{writers}} </select>                    该角色具有读写权限。 </p>
-                <p><span class="readers">读权限 </span> <select id="selectReaders" multiple> <option ng-repeat="readers in permissions.readers" selected>{{readers}} </select>                    该角色仅具有读权限。 </p>
+                <p>
+                    <span class="owners">所有者 </span>
+                    <select id="selectOwners" multiple>
+                        <option ng-repeat="owner in permissions.owners" selected>{{owner}} </select> 所有者可以改变权限，包括对工作区做读和写操作。</p>
+                <p>
+                    <span class="writers">读写权限 </span>
+                    <select id="selectWriters" multiple>
+                        <option ng-repeat="writers in permissions.writers" selected>{{writers}} </select> 该角色具有读写权限。 </p>
+                <p>
+                    <span class="readers">读权限 </span>
+                    <select id="selectReaders" multiple>
+                        <option ng-repeat="readers in permissions.readers" selected>{{readers}} </select> 该角色仅具有读权限。 </p>
             </div>
-        </div> <br>
-        <div> <button class="btn btn-primary" ng-click="savePermissions()">保存</button> <button class="btn btn-default" ng-click="closePermissions()">取消</button>            </div>
+        </div>
+        <br>
+        <div>
+            <button class="btn btn-primary" ng-click="savePermissions()">保存</button>
+            <button class="btn btn-default" ng-click="closePermissions()">取消</button>
+        </div>
     </div>
     <div class="note-jump"></div>
     <!-- Include the paragraphs according to the note, pass the note to init function -->
