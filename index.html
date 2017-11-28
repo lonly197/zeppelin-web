@@ -1,17 +1,17 @@
 <!doctype html>
 <!--
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
--->
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+  http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
 <html ng-controller="MainCtrl" class="no-js">
 
 <head>
@@ -34,43 +34,41 @@ limitations under the License.
     }
   </style>
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-  <link rel="stylesheet" href="styles/vendor.e42f887145212619.css">
+  <link rel="stylesheet" href="styles/vendor.00a7e4bc8047b965.css">
   <link rel="stylesheet" href="styles/main.37c6afb281aa062d.css">
   <link rel="stylesheet" ng-href="assets/styles/looknfeel/{{looknfeel}}.css">
   <link rel="stylesheet" href="assets/styles/printMode.css">
 
   <body ng-class="{'bodyAsIframe': asIframe}">
     <!--[if lt IE 7]>
-    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
     <toast></toast>
-    <div ng-if="ticket.principal=='admin'">
-      <div ng-include src="'components/navbar/navbar.html?v=1496974691584'"></div>
-    </div>
+    <div ng-include src="'components/navbar/navbar.html?v=1505744313788'"></div>
     <!-- Add your site or application content here -->
     <div id="main" class="container">
       <div ng-view></div>
     </div>
     <!-- Modal ::  Keyboard shortcuts -->
-    <div ng-include src="'components/modal-shortcut/modal-shortcut.html?v=1496974691584'"></div>
+    <div ng-include src="'components/modal-shortcut/modal-shortcut.html?v=1505744313788'"></div>
     <div ng-controller="NotenameCtrl as notenamectrl">
-      <div id="note-modal-container" ng-include src="'components/noteName-create/note-name-dialog.html?v=1496974691584'"></div>
+      <div id="note-modal-container" ng-include src="'components/noteName-create/note-name-dialog.html?v=1505744313788'"></div>
     </div>
     <div ng-controller="NoteImportCtrl as noteimportctrl">
-      <div id="note-import-container" ng-include src="'components/noteName-import/note-import-dialog.html?v=1496974691584'"></div>
+      <div id="note-import-container" ng-include src="'components/noteName-import/note-import-dialog.html?v=1505744313788'"></div>
     </div>
     <div ng-controller="LoginCtrl as noteimportctrl">
-      <div id="login-container" ng-include src="'components/login/login.html?v=1496974691584'"></div>
+      <div id="login-container" ng-include src="'components/login/login.html?v=1505744313788'"></div>
     </div>
     <div ng-controller="RenameCtrl">
-      <div ng-include src="'components/rename/rename.html?v=1496974691584'"></div>
+      <div ng-include src="'components/rename/rename.html?v=1505744313788'"></div>
     </div>
     <!--[if lt IE 9]>
-    <script src="scripts/oldieshim.8967257085f0b83a.js"></script>
-    <![endif]-->
+      <script src="scripts/oldieshim.8967257085f0b83a.js"></script>
+      <![endif]-->
     <script type="text/x-mathjax-config">var config = { extensions: ["tex2jax.js"], jax: ["input/TeX", "output/HTML-CSS"], tex2jax: { inlineMath: [ ["\\(","\\)"]
       ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ], processEscapes: true }, "HTML-CSS": { availableFonts: ["TeX"] }, messageStyle:
       "none" } // add root only if it's not dev mode if (Number(location.port) !== 9000) { config.root = '.'; } MathJax.Hub.Config(config);
     </script>
-    <script src="scripts/vendor.dba6f023722060da.js"></script>
-    <script type="text/javascript" src="app.a01a462d75c8f7e54e09.js"></script>
+    <script src="scripts/vendor.8ede8f6353d12343.js"></script>
+    <script type="text/javascript" src="app.1fa46a4e6cdd598200c3.js"></script>

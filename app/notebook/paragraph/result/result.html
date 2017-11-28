@@ -12,9 +12,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 <div>
-    <div ng-if="ticket.principal=='admin'">
-        <div ng-include src="'app/notebook/paragraph/result/result-chart-selector.html?v=1496974691584'"></div>
-    </div>
+    <div ng-include src="'app/notebook/paragraph/result/result-chart-selector.html?v=1496974691584'"></div>
     <div id="p{{id}}_resize" ng-if="!config.helium.activeApp" style="padding-bottom: 5px" resize="{&quot;allowresize&quot;: &quot;{{!asIframe && !viewOnly}}&quot;, &quot;graphType&quot;: &quot;{{type}}&quot;}"
         resizable on-resize="resize(width, height);">
         <div ng-if="type=='TABLE'">

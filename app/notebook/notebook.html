@@ -13,12 +13,10 @@ limitations under the License.
 -->
 <!-- Here the controller <NotebookCtrl> is not needed because explicitly set in the app.js (route) -->
 <!-- Action Bar(Edited) -->
-<div ng-if="ticket.principal=='admin'">
-    <div id="actionbar" ng-include src="'app/notebook/notebook-actionBar.html?v=1496974691584'"></div>
-</div>
+<div id="actionbar" ng-include src="'app/notebook/notebook-actionBar.html?v=1496974691584'"></div>
 <div id="content" class="notebookContent">
     <!-- settings(Edited) -->
-    <div ng-if="showSetting && ticket.principal=='admin'" class="setting">
+    <div ng-if="showSetting" class="setting">
         <div>
             <h4>工作区设置</h4>
         </div>
@@ -92,32 +90,19 @@ limitations under the License.
     <div id="{{currentParagraph.id}}_paragraphColumn_main" ng-repeat="currentParagraph in note.paragraphs" ng-controller="ParagraphCtrl"
         ng-init="init(currentParagraph, note)" ng-class="columnWidthClass(currentParagraph.config.colWidth)" style="margin: 0; padding: 0">
         <!-- New Paragraph(Edit) -->
-        <div ng-if="ticket.principal=='admin'">
-            <div class="new-paragraph" ng-click="insertNew('above')" ng-hide="viewOnly || asIframe || revisionView">
-                <h4 class="plus-sign">&#43;</h4>
-            </div>
+        <div class="new-paragraph" ng-click="insertNew('above')" ng-hide="viewOnly || asIframe || revisionView">
+            <h4 class="plus-sign">&#43;</h4>
         </div>
         <!-- New Paragraph Column START(Edit) -->
         <div ng-switch='ticket.principal'>
-            <div ng-switch-when="admin">
-                <div id="{{currentParagraph.id}}_paragraphColumn" ng-include src="'app/notebook/paragraph/paragraph.html?v=1496974691584'"
-                    ng-class="{'paragraph-space box paragraph-margin': !asIframe, 'focused': paragraphFocused,
-                    'lastEmptyParagraph': !paragraph.text && !paragraph.result}" ng-hide="currentParagraph.config.tableHide && viewOnly"
-                    ng-dblclick="paragraphOnDoubleClick(currentParagraph.id);">
-                </div>
-            </div>
-            <div ng-switch-default>
-                <div id="{{currentParagraph.id}}_paragraphColumn" ng-include src="'app/notebook/paragraph/paragraph.html?v=1496974691584'"
-                    ng-class="{'focused': false,'lastEmptyParagraph': !paragraph.text && !paragraph.result}" ng-hide="currentParagraph.config.tableHide && viewOnly && ticket.principal!='admin'"
-                    style='padding-top: 0 !important;padding-bottom: 0 !important;padding: 10px!important;border: 0;min-height: 0;margin-right: 2px;margin-left: 2px;background: #fff;border-radius: 3px;box-shadow: none;'>
-                </div>
+            <div id="{{currentParagraph.id}}_paragraphColumn" ng-include src="'app/notebook/paragraph/paragraph.html?v=1496974691584'"
+                ng-class="{'focused': false,'lastEmptyParagraph': !paragraph.text && !paragraph.result}" ng-hide="currentParagraph.config.tableHide && viewOnly"
+                style='padding-top: 0 !important;padding-bottom: 0 !important;padding: 10px!important;border: 0;min-height: 0;margin-right: 2px;margin-left: 2px;background: #fff;border-radius: 3px;box-shadow: none;'>
             </div>
         </div>
         <!-- New Paragraph Column END(Edit) -->
-        <div ng-if="ticket.principal=='admin'">
-            <div class="new-paragraph" ng-click="insertNew('below');" ng-hide="!$last || viewOnly || asIframe || revisionView">
-                <h4 class="plus-sign">&#43;</h4>
-            </div>
+        <div class="new-paragraph" ng-click="insertNew('below');" ng-hide="!$last || viewOnly || asIframe || revisionView">
+            <h4 class="plus-sign">&#43;</h4>
         </div>
     </div>
     <div style="clear:both;height:10px"></div>
