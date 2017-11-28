@@ -1,6 +1,6 @@
 # Zeppelin-Webapp
 
-> This is a modified version of zeppelin-web-0.7.2, mainly for the changes to the page permissions to support the Report can be embedded into other systems.
+> This is a modified version of zeppelin-web-0.7.3, mainly for the changes to the page permissions to support the Report can be embedded into other systems.
 
 ## Getting Started
 
