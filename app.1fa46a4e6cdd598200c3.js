@@ -750,8 +750,8 @@
                 closable: !0,
                 title: "设置结果显示",
                 message: function (t) {
-                    var n = "true" === e.note.config.personalizedMode ? "公开化" : "私有化";
-                    return '是否约定要 <span class="text-info">' + n + "</span> 你的工作区?"
+                    var n = "true" === e.note.config.personalizedMode ? "公开" : "私有化";
+                    return '是否确定要 <span class="text-info">' + n + "</span> 你的工作区?"
                 },
                 callback: function (n) {
                     n && (void 0 === e.note.config.personalizedMode && (e.note.config.personalizedMode = "false"), e.note.config.personalizedMode = "true" === t ? "false" : "true", i.updatePersonalizedMode(e.note.id, e.note.config.personalizedMode))
@@ -3363,7 +3363,7 @@
         }, e.getExecutionTime = function (t) {
             var n = Date.parse(t.dateFinished) - Date.parse(t.dateStarted);
             if (isNaN(n) || n < 0) return e.isResultOutdated(t) ? "过期" : "";
-            var r = void 0 === t.user || null === t.user ? "anonymous" : t.user,
+            var r = void 0 === t.user || null === t.user ? "匿名用户" : t.user,
                 o = "耗时 " + moment.duration(n / 1e3, "seconds").format("h [hrs] m [min] s [sec]") + "。 最后一次更新由 " + r + " 在 " + moment(t.dateFinished).format("MMMM DD YYYY, h:mm:ss A") + ".";
             return e.isResultOutdated(t) && (o += " (过期)"), o
         }, e.getElapsedTime = function (e) {
