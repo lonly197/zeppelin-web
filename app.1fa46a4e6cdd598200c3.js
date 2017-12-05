@@ -3363,7 +3363,7 @@
         }, e.getExecutionTime = function (t) {
             var n = Date.parse(t.dateFinished) - Date.parse(t.dateStarted);
             if (isNaN(n) || n < 0) return e.isResultOutdated(t) ? "过期" : "";
-            var r = void 0 === t.user || null === t.user ? "匿名用户" : t.user,
+            var r = void 0 === t.user || null === t.user || 'anonymous' === t.user ? "匿名用户" : t.user,
                 o = "耗时 " + moment.duration(n / 1e3, "seconds").format("h [hrs] m [min] s [sec]") + "。 最后一次更新由 " + r + " 在 " + moment(t.dateFinished).format("MMMM DD YYYY, h:mm:ss A") + ".";
             return e.isResultOutdated(t) && (o += " (过期)"), o
         }, e.getElapsedTime = function (e) {
