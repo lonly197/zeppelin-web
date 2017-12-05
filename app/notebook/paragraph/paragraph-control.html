@@ -12,7 +12,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 <div id="{{paragraph.id}}_control" class="control" ng-show="!asIframe">
-    <span> {{(new Map([['READY','准备'], ['FINISHED','完成'], ['ABORT','终止'], ['ERROR','失败'],['PENDING','等待'],['RUNNING','运行中']])).get(paragraph.status)}} </span>
+    <span> {{paragraph.status}} </span>
     <span ng-if="paragraph.status=='RUNNING'"> {{getProgress()}}% </span>
     <!-- Run / Cancel button -->
     <span ng-if="!revisionView">
