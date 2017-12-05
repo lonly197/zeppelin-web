@@ -3364,7 +3364,7 @@
             var n = Date.parse(t.dateFinished) - Date.parse(t.dateStarted);
             if (isNaN(n) || n < 0) return e.isResultOutdated(t) ? "过期" : "";
             var r = void 0 === t.user || null === t.user ? "anonymous" : t.user,
-                o = "耗时 " + moment.duration(n / 1e3, "seconds").format("h [hrs] m [min] s [sec]") + "。 最后一次更新 " + r + " 在 " + moment(t.dateFinished).format("MMMM DD YYYY, h:mm:ss A") + ".";
+                o = "耗时 " + moment.duration(n / 1e3, "seconds").format("h [hrs] m [min] s [sec]") + "。 最后一次更新由 " + r + " 在 " + moment(t.dateFinished).format("MMMM DD YYYY, h:mm:ss A") + ".";
             return e.isResultOutdated(t) && (o += " (过期)"), o
         }, e.getElapsedTime = function (e) {
             return "在 " + moment(e.dateStarted).fromNow() + " 以前启动。"
@@ -4150,7 +4150,7 @@
                         closeByBackdrop: !1,
                         closeByKeyboard: !1,
                         title: "",
-                        message: "是否确定要启用 " + e + '?<div style="color:gray">' + t + '</div><div style="border-top: 1px solid #efefef; margin-top: 10px; padding-top: 5px;">License</div><div style="color:gray">' + n + "</div>",
+                        message: "是否确定要启用 " + e + '?<div style="color:gray">' + t + '</div><div style="border-top: 1px solid #efefef; margin-top: 10px; padding-top: 5px;">证书</div><div style="color:gray">' + n + "</div>",
                         callback: function (n) {
                             if (n) return r.$modalFooter.find("button").addClass("disabled"), r.$modalFooter.find('button:contains("OK")').html('<i class="fa fa-circle-o-notch fa-spin"></i> 正在启用中……'), a.enable(e, t).success(function (e, t) {
                                 c(), r.close()
