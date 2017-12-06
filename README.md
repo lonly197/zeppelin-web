@@ -2,6 +2,23 @@
 
 > This is a modified version of zeppelin-web-0.7.2, mainly for the changes to the page permissions to support the Report can be embedded into other systems.
 
+                        ##         .
+                  ## ## ##        ==
+               ## ## ## ## ##    ===
+           /"""""""""""""""""\___/ ===
+      ~~~ {~~ ~~~~ ~~~ ~~~~ ~~~ ~ /  ===- ~~~
+           \______ o Zeppelin  __/
+             \    \         __/
+              \____\_______/
+
+> Please use corresponding branches from this repo to play with code.
+
+- __0.7.2__
+- __0.7.2-cn__
+- __0.7.3__
+- __0.7.3-cn__
+- __0.7.3-cn-special__
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -17,6 +34,12 @@ A step by step series of examples that tell you have to get a development env ru
 Git Clone Project
 ```
 git clone http://git.dataw.com.cn/dmp/zeppelin-webapp.git
+```
+
+Checkout [branch]
+```
+cd zeppelin-webapp
+git checkout [branch]
 ```
 
 Cp Project
